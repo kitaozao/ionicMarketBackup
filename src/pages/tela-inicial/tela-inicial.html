@@ -1,0 +1,51 @@
+<ion-header>
+<!-- 	<ion-navbar style="background: #FF0000 !important">
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Market List</ion-title>
+	</ion-navbar> -->
+</ion-header>
+
+<ion-content padding>
+<ion-grid text-center>
+	<ion-row>
+		<ion-col width-90>
+			<img src="../assets/images/logo-supermuffato.svg">
+		</ion-col>
+	</ion-row>
+	<ion-row >
+		<ion-col width-33>
+			<button [navPush]="AddlistPage" ion-button icon-only round large color="light">
+				<ion-icon name="add"></ion-icon>
+			</button>
+		</ion-col>
+		<ion-col width-33>
+			<button [navPush]="ListPage" ion-button icon-only round large color="light" >
+				<ion-icon name="basket"></ion-icon>
+			</button>
+		</ion-col>
+		<ion-col width-33>
+			<button [navPush]="MapPage" ion-button icon-only round large color="light">
+				<ion-icon name="map"></ion-icon>
+			</button>
+		</ion-col>
+	</ion-row> 
+</ion-grid>
+
+<ion-slides style="height: 55vh;" autoplay="3000">
+
+		<ion-slide style="background-color: transparent">
+			<img style="height: 100%;width: 100%" src="../assets/images/Oferta1.jpg">
+		</ion-slide>
+
+		<ion-slide style="background-color: transparent">
+			<img style="height: 100%;width: 100%" src="../assets/images/Oferta2.jpg">
+		</ion-slide>
+
+		<ion-slide style="background-color: transparent">
+			<img style="height: 100%;width: 100%" src="../assets/images/Oferta3.jpg">
+		</ion-slide>
+
+</ion-slides>
+</ion-content>

@@ -1,0 +1,50 @@
+<ion-header>
+ 
+  <ion-navbar>
+    <ion-title>itens</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="AddIten()"><ion-icon name="add"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+ 
+</ion-header>
+ 
+<ion-content>
+  <ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-col width-33>
+          Quantidade
+        </ion-col>
+        <ion-col width-66>
+          Produto
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-item-sliding *ngFor="let iten of itens">
+                            
+      <ion-item>
+        <ion-grid>
+          <ion-row>
+            <ion-col width-33>
+              {{iten.quantidade}}
+            </ion-col>
+            <ion-col width-66>
+              {{iten.title}}
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button icon-only (click)="editIten(iten)" light>
+          <ion-icon name="paper"></ion-icon>
+        </button>
+        <button ion-button icon-only (click)="deleteIten(iten)" danger>
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <button ion-button full>Salvar lista</button>
+  <button ion-button full color="danger" navPop>Cancelar</button>
+</ion-content>
